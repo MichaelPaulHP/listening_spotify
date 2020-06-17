@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical">
+        <!--androidx.constraintlayout.widget.ConstraintLayout-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/lekton_bold"
+            android:text="You are listening"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+            <FrameLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:minHeight="150dp" />
+
+            <FrameLayout
+                android:id="@+id/fragmentOfVideos"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                 />
+        </LinearLayout>
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:layout_height="150dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+        </LinearLayout>-->
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="40dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/lekton_bold"
+            android:text="History: ▲"
+            android:textSize="30sp"
+            android:textColor="@color/colorAccent"
+             />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+             />
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="150dp"
+    >
+
+    <ImageView
+        android:id="@+id/videoImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:contentDescription="image video" />
+    <Button
+        android:id="@+id/deleteVideoBtn"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:drawableStart="@drawable/ic_baseline_delete_24"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/lekton_bold"
+        android:background="@color/colorPrimary"
+        android:layout_marginEnd="13dp"
+        android:layout_alignParentEnd="true"
+        android:drawableLeft="@drawable/ic_baseline_delete_24" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="5dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/videoTitle"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="25dp"
+            android:fontFamily="@font/lekton_bold"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/videoOther"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_height="25dp"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

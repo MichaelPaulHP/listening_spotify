@@ -1,0 +1,13 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#232830</item>
+        <item name="colorPrimaryDark">#71F99C</item>
+        <item name="colorAccent">#ECF0BC</item>
+        <item name="colorSecondary" >#71F99C</item>
+        <item name="android:fontFamily">@font/lekton</item>-->
+
+    </style>
+
+</resources>
