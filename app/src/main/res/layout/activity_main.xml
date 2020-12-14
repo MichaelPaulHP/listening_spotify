@@ -22,6 +22,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
+            android:textColor="@color/colorPrimary"
             android:fontFamily="@font/lekton_bold"
             android:text="You are listening"
             android:textSize="30sp" />

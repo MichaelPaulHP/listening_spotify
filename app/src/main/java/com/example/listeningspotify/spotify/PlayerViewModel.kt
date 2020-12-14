@@ -143,12 +143,18 @@ class PlayerViewModel(application: Application) : Connector.ConnectionListener,
             val response=videosFound.awaitResponse()
             if(response.isSuccessful){
                 val resBody=response.body()
-                resBody?.items?.reversed()?.forEach {
-                    videos.add(0,Video.fromVideoEntity(it))
+                if(resBody!=null){
+
+                    val youTubeResponse:YouTubeResponse= resBody
+
+                    youTubeResponse.items.reversed().forEach {
+                        videos.add(0,Video.fromVideoEntity(it))
+                    }
+                    withContext(Dispatchers.Main){
+                        youTubeState.postValue(YouTubeVideosFound(videos))
+                    }
                 }
-                withContext(Dispatchers.Main){
-                    youTubeState.postValue(YouTubeVideosFound(videos))
-                }
+
 
                 //youTubeState.value = YouTubeVideosFound(videos);
             }else{

@@ -17,11 +17,12 @@
             android:textSize="18sp"
             android:layout_marginLeft="50dp"
             android:layout_marginStart="50dp" />
+
         <TextView
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Please Select a Track to Listening"
+            android:text="- Please Select a Track"
             android:textSize="18sp"
             android:layout_marginHorizontal="50dp"
             android:layout_alignParentBottom="true"
